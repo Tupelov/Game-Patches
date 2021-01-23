@@ -1,0 +1,58 @@
+gametitle=Persona 3 FES [SLUS_216.21] [94A82AAA]
+comment=Velvet Room BG Patch V2 by Tupelov
+version=2
+author= Tupelov
+
+//Velvet room fusion call
+patch=1,EE,003D3D84,word,24040001// Set register a0 to 1
+patch=1,EE,003D3D88,word,24050001// Set register a1 to 1
+
+//Edits fusion room call to not make npcs invisible
+patch=1,EE,003D3D98,word,24050001// Set register a1 to 1
+patch=1,EE,003D3DA8,word,24050001// Set register a1 to 1
+patch=1,EE,003D3DB8,word,24050001// Set register a1 to 1
+
+
+//Edits compendium call
+patch=1,EE,003E9320,word,24040001// Set register a0 to 1
+patch=1,EE,003E9324,word,24050001// Set register a1 to 1
+
+//Edits compendium call to not make npcs invisble
+patch=1,EE,003e9338,word,24050001// Set register a1 to 1
+patch=1,EE,003e9344,word,24050001// Set register a1 to 1
+patch=1,EE,003e9358,word,24050001// Set register a1 to 1
+
+//Edits igor call
+patch=1,EE,003d51a0,word,24040001// Set register a0 to 1
+patch=1,EE,003d51a4,word,24050001// Set register a1 to 1
+
+//Edits igor call to not make npcs invisible
+patch=1,EE,003d51b4,word,24050001// Set register a1 to 1
+patch=1,EE,003d51c4,word,24050001// Set register a1 to 1
+patch=1,EE,003d51d4,word,24050001// Set register a1 to 1
+
+
+//Makes the game not load the crusty background
+patch=1,EE,006a7a90,word,00000000// Removes path to background sprite
+patch=1,EE,006a7a94,word,00000000// Removes path to background sprite
+patch=1,EE,006a7a98,word,00000000// Removes path to background sprite
+patch=1,EE,006a7a9c,word,00000000// Removes path to background sprite
+patch=1,EE,006A7AA0,word,00000000// Removes path to background sprite
+patch=1,EE,006A7AA4,word,00000000// Removes path to background sprite
+patch=1,EE,006A7AA8,word,00000000// Removes path to background sprite
+
+patch=1,EE,00620194,word,00000000// Removes string for background sprite
+patch=1,EE,00620198,word,00000000// Removes string for background sprite
+patch=1,EE,0062019C,word,00000000// Removes string for background sprite
+patch=1,EE,006201A0,word,00000000// Removes string for background sprite
+patch=1,EE,006201A4,word,00000000// Removes string for background sprite
+patch=1,EE,006201A8,word,00000000// Removes string for background sprite
+//patch=1,EE,006A7AA8,word,00000000// Removes string to background sprite
+
+
+//Only use below section if you want this to apply to all fields.
+
+//Edits function to always make stuff visible (broken)
+//patch=1,EE,001A00D8,word,1652FFEC
+//patch=1,EE,001A00E4,word,16310011
+//patch=1,EE,001A00F8,word,16310006
