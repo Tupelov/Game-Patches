@@ -1,0 +1,31 @@
+gametitle=Persona 3 FES [SLUS_216.21] [94A82AAA]
+comment=Source File TTY Edit by Tupelov
+version=1
+author= Tupelov
+
+//Begin hook
+//0097e600
+patch=1,EE,0019d3f0,word,0825f980// calls new function
+patch=1,EE,0019d3f4,word,00000000// nop
+patch=1,EE,0019d3f8,word,00000000// nop
+patch=1,EE,0019d3fc,word,00000000// nop
+
+//New function
+patch=1,EE,0097e600,word,00a03025// Moves a1 to a2
+patch=1,EE,0097e604,word,00802825//Moves a0 to a1
+patch=1,EE,0097e608,word,3c040097//Sets a0 to the string address upper 16 bits
+patch=1,EE,0097e60c,word,3484e650//Sets a0 to the string address lower 16 bits
+patch=1,EE,0097e610,word,23bdfffc//Moves stack pointer by -4
+patch=1,EE,0097e614,word,afbf0000//Saves return address 4 bytes
+patch=1,EE,0097e618,word,0c14896a//Calls p3 tty
+patch=1,EE,0097e61c,word,00000000//nop
+patch=1,EE,0097e620,word,8fbf0000//Loads return address
+patch=1,EE,0097e624,word,23bd0004//Brings stack pointer to where it was.
+patch=1,EE,0097e628,word,03e00008//return
+
+//New Print String
+//[%s:%d]\n
+patch=1,EE,0097e650,word,3a73255b
+patch=1,EE,0097e654,word,0A5d6425
+patch=1,EE,0097e658,byte,00
+
