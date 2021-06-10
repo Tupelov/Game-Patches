@@ -1,0 +1,9 @@
+gametitle=Persona 3 FES [SLUS_216.21] [94A82AAA]
+comment=Infinite Persona Switch by Tupelov
+author= Tupelov
+version=1
+
+// Nop checking if the battle packet is ready
+patch=1,EE,00297708,word,00000000
+
+
