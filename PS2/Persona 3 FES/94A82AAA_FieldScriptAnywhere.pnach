@@ -1,0 +1,7 @@
+gametitle=Persona 3 FES [SLUS_216.21] [94A82AAA]
+comment=Field Script Anywhere by Tupelov
+author= Tupelov
+version=1
+
+//nops debug check
+patch=1,EE,001c8998,word,00000000
