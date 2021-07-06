@@ -1,0 +1,14 @@
+gametitle=Persona 3 Debug [SLUS_215.69] [B3829475]
+comment=Debug Log Patch by TGE, ported by Tupelov
+version=1
+author=TGE, Tupelov
+
+// Enable debug log by TGE and Tupelov
+
+patch=1,EE,00549228,word,00000000 // always branch even if not debug
+patch=1,EE,00613983,byte,0A // patch file load print string
+
+//00567fa8>>2 +0C000000
+//C0414C4
+//00105310
+patch=1,EE,00100d3c,word,0C159FEA // patch file load function call to debug print

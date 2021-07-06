@@ -1,0 +1,10 @@
+//NOTE: NONE OF THIS WAS CREATED BY TUPELOV, THIS IS HERE ONLY BECAUSE IT IS REQUIRED BY ANOTHER PATCH
+
+// Enable debug log by TGE
+
+patch=1,EE,00503768,word,00000000 // always branch even if not debug
+patch=1,EE,005CDE83,byte,0A // patch file load print string
+patch=1,EE,00100DAC,word,0C14896A // patch file load function call to debug print
+patch=0,EE,00558cd4,word,00000000// fixes sceopen error
+
+//patch=1,EE,2036E8C4,extended,00000000
