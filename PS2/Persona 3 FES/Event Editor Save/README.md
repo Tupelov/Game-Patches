@@ -23,3 +23,4 @@
 14. If you wish to save again you must remove the addresses by double clicking
 # Known Issues
 1. Saving twice in a row causes major graphical issues.
+2. Patches causes character portraits to appear as white squares.
