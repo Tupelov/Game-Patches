@@ -1,0 +1,16 @@
+{
+    "ModId": "DigimonCSFileLog",
+    "ModName": "Digimon CS File Log",
+    "ModAuthor": "Tupelov",
+    "ModVersion": "1.0.0",
+    "ModDescription": "Prints what file is being loaded to the Reloaded-II log.",
+    "ModDll": "DigimonCSLogHook.dll",
+    "ModIcon": "Preview.png",
+    "ModR2RManagedDll32": "x86/DigimonCSLogHook.dll",
+    "ModR2RManagedDll64": "x64/DigimonCSLogHook.dll",
+    "ModNativeDll32": "",
+    "ModNativeDll64": "",
+    "ModDependencies": [ "reloaded.sharedlib.hooks" ],
+    "OptionalDependencies": null,
+    "SupportedAppId": [ "digimon story cs.exe" ]
+}
