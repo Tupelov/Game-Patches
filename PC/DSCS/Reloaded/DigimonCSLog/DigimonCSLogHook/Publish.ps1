@@ -1,7 +1,7 @@
 # Project Output Paths
 $modOutputPath = "TempBuild"
-$solutionName = "DigimonCSLogHook.csproj"
-$publishName = "DigimonCSLogHook.zip"
+$solutionName = "DigimonCSLog.csproj"
+$publishName = "DigimonCSLog.zip"
 $publishDirectory = "Publish"
 
 [Environment]::CurrentDirectory = $PWD
