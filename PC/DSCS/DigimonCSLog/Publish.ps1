@@ -7,8 +7,8 @@ $publishDirectory = "Publish"
 [Environment]::CurrentDirectory = $PWD
 
 # Clean anything in existing Release directory.
-Remove-Item $modOutputPath -Recurse
-Remove-Item $publishDirectory -Recurse
+if ( Test-Path -Path $modOutputPath -PathType Container ) { Remove-Item $modOutputPath -Recurse }
+if ( Test-Path -Path $publishDirectory -PathType Container ) { Remove-Item $publishDirectory -Recurse }
 New-Item $modOutputPath -ItemType Directory
 New-Item $publishDirectory -ItemType Directory
 
@@ -31,7 +31,7 @@ Get-ChildItem $modOutputPath -Include *.xml -Recurse | Remove-Item -Force -Recur
 
 # Compress
 Add-Type -A System.IO.Compression.FileSystem
-[IO.Compression.ZipFile]::CreateFromDirectory($modOutputPath, "$publishDirectory/$publishName")
+[IO.Compression.ZipFile]::CreateFromDirectory($modOutputPath, "../$publishDirectory/$publishName")
 
 # Cleanup After Build
 Remove-Item $modOutputPath -Recurse
