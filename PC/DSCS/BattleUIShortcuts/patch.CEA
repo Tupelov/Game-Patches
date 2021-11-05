@@ -1,0 +1,27 @@
+alloc(newmem,2048,"Digimon Story CS.exe.unpacked.exe"+171D54) 
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+test byte ptr [rax+08],04 // if(buttonAPressed) goto menuhandling:
+jne "Digimon Story CS.exe.unpacked.exe"+00171ddb
+// if(selected == attack) {return;}
+// were not pressing the button here
+cmp EDI, 0x14
+je "Digimon Story CS.exe.unpacked.exe"+00171f3d
+// else we jump to handling the other selections
+jmp "Digimon Story CS.exe.unpacked.exe"+171D5E
+
+originalcode:
+
+
+exit:
+jmp returnhere
+
+"Digimon Story CS.exe.unpacked.exe"+171D54:
+jmp newmem
+nop 5
+returnhere:
+

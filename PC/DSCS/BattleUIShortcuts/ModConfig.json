@@ -1,0 +1,16 @@
+{
+  "ModId": "dscs.tupelov.battleuishortcuts",
+  "ModName": "DSCS Battle UI Shortcuts",
+  "ModAuthor": "Tupelov",
+  "ModVersion": "1.0.0",
+  "ModDescription": "Lets you select the battle wheel options by just clicking the dpad or moving the joystick.",
+  "ModDll": "BattleUIShortcuts.dll",
+  "ModIcon": "Preview.png",
+  "ModR2RManagedDll32": "x86/BattleUIShortcuts.dll",
+  "ModR2RManagedDll64": "x64/BattleUIShortcuts.dll",
+  "ModNativeDll32": "",
+  "ModNativeDll64": "",
+  "ModDependencies": [ "reloaded.sharedlib.hooks" ],
+  "OptionalDependencies": null,
+  "SupportedAppId": [ "digimon story cs.exe" ]
+}

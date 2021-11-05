@@ -1,7 +1,7 @@
 # Project Output Paths
 $modOutputPath = "TempBuild"
-$solutionName = "DigimonCSLog.csproj"
-$publishName = "dscs.tupelov.filelogger.zip"
+$solutionName = "BattleUIShortcuts.csproj"
+$publishName = "dscs.tupelov.battleuishortcuts.zip"
 $publishDirectory = "Publish"
 
 [Environment]::CurrentDirectory = $PWD

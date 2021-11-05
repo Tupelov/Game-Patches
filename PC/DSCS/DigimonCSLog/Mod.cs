@@ -25,7 +25,9 @@ namespace DigimonCSLogHook
 			var result = scanner.CompiledFindPattern("4C 89 44 24 18 48 89 54 24 10 48 89 4C 24 08 55 53 56 57 48 8D 6C 24 D8");
 
 			var functionAddress = result.Offset + (long)_process.MainModule.BaseAddress;
+#if DEBUG
 			_logger.WriteLine($"Address: {functionAddress:X}");
+#endif
 			_loadFileHook = _hooks.CreateHook<LoadFile>(LoadFileFunc, functionAddress).Activate();
 		}
 
