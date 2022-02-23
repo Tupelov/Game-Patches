@@ -1,0 +1,13 @@
+gametitle=Persona 3 FES [SLUS_216.21] [94A82AAA]
+comment=Restored Level Up Theme by Tupelov
+author= Tupelov
+version=1
+
+patch=1,EE,00233b30,word,00000000 // nop
+patch=1,EE,00233b34,word,00000000 // nop
+patch=1,EE,00233b38,word,2404003d // li a0, 0x3d
+patch=1,EE,00233b3c,word,24050001 // li a1, 0x1
+patch=1,EE,00233b40,word,0c042674 // jal playBGM
+patch=1,EE,00233b44,word,00000000 // nop
+patch=1,EE,00233b48,word,00000000 // nop
+
