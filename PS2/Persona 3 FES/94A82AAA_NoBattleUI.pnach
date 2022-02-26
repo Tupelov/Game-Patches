@@ -1,0 +1,8 @@
+gametitle=Persona 3 FES [SLUS_216.21] [94A82AAA]
+comment=No Battle UI by Tupelov
+author= Tupelov
+version=1
+
+// return immediatly upon entering battle_panel_draw
+patch=1,EE,001fdac0,word,03e00008 // jr ra
+patch=1,EE,001fdac4,word,00000000 // nop
