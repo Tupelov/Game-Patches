@@ -22,8 +22,9 @@ patch=1,EE,00109a8c,word,02003025 // move a2, s0
 
 // Unhardcode battles
 patch=1,EE,002dce3c,word,081f2cb4 // j 0x007cb2d0
+patch=1,EE,002dce4c,word,2404001a // li a0, 0x1a
 
-patch=1,EE,007cb2d0,word,14400005 // bne v0, zero, 0x007cb2e8
+patch=1,EE,007cb2d0,word,10200005 // bne v0, zero, 0x007cb2e8
 patch=1,EE,007cb2d4,word,00000000 // nop
 patch=1,EE,007cb2d8,word,0c05f600 // jal 0x0017d800
 patch=1,EE,007cb2dc,word,00000000 // nop
