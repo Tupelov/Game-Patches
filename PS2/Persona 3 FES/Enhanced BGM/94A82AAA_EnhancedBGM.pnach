@@ -60,7 +60,7 @@ patch=1,EE,007cb324,word,14400004 // bneq v0, zero, 007cb338
 patch=1,EE,007cb328,word,00000000 // nop
 
 patch=1,EE,007cb32c,word,0c042674 // jal 0x001099d0
-patch=1,EE,007cb330,word,2404000f // li a0, 0xf
+patch=1,EE,007cb330,word,2404000e // li a0, 0xe
 patch=1,EE,007cb334,word,080b739d // j 0x002dce74
 patch=1,EE,007cb338,word,00000000 // nop
 
