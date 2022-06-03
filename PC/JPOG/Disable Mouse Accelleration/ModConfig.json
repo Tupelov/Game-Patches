@@ -1,0 +1,41 @@
+{
+  "ModId": "jpog.tupelov.disablemouseaccell",
+  "ModName": "JPOG: Disable Mouse Accelleration",
+  "ModAuthor": "Tupelov",
+  "ModVersion": "1.0.0",
+  "ModDescription": "Disables the mouse accelleration within the game.",
+  "ModDll": "jpog.tupelov.disablemouseaccell.dll",
+  "ModIcon": "Logo.png",
+  "ModR2RManagedDll32": "",
+  "ModR2RManagedDll64": "",
+  "ModNativeDll32": "",
+  "ModNativeDll64": "",
+  "IsLibrary": false,
+  "ReleaseMetadataFileName": "Sewer56.Update.ReleaseMetadata.json",
+  "PluginData": {
+    "GitHubDependencies": {
+      "IdToConfigMap": {
+        "reloaded.sharedlib.hooks": {
+          "Config": {
+            "UserName": "Reloaded.SharedLib.Hooks.ReloadedII",
+            "RepositoryName": "Sewer56",
+            "UseReleaseTag": true,
+            "AssetFileName": "reloaded.sharedlib.hooks.zip"
+          }
+        }
+      }
+    },
+    "GameBanana": {
+      "ItemType": "Mod",
+      "ItemId": 381529
+    }
+  },
+  "IsUniversalMod": false,
+  "ModDependencies": [
+    "reloaded.sharedlib.hooks"
+  ],
+  "OptionalDependencies": [],
+  "SupportedAppId": [
+    "simjp.exe"
+  ]
+}
