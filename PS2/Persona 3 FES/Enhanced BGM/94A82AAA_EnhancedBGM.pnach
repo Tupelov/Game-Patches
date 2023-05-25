@@ -19,73 +19,73 @@ patch=1,EE,7CB2B4,word,00000000
 
 
 patch=1,EE,00109204,word,00000000 // nop
-patch=1,EE,00109218,word,278585b8 // addiu a1,gp, -0x7a48
+patch=1,EE,00109218,word,278585b8 // addiu a1,gp, -7a48
 patch=1,EE,0010921c,word,00603025 // move a2, v1
 
 patch=1,EE,00109a8c,word,02003025 // move a2, s0
 
 
 // Unhardcode battles
-patch=1,EE,002dce3c,word,081f2cb4 // j 0x007cb2d0
-patch=1,EE,002dce4c,word,2404001a // li a0, 0x1a
+patch=1,EE,002dce3c,word,081f2cb4 // j 007cb2d0
+patch=1,EE,002dce4c,word,2404001a // li a0, 1a
 
-patch=1,EE,007cb2d0,word,10200005 // bne v0, zero, 0x007cb2e8
+patch=1,EE,007cb2d0,word,10200005 // bne v0, zero, 007cb2e8
 patch=1,EE,007cb2d4,word,00000000 // nop
-patch=1,EE,007cb2d8,word,0c05f600 // jal 0x0017d800
+patch=1,EE,007cb2d8,word,0c05f600 // jal 0017d800
 patch=1,EE,007cb2dc,word,00000000 // nop
-patch=1,EE,007cb2e0,word,080b7391 // j 0x002dce44
+patch=1,EE,007cb2e0,word,080b7391 // j 002dce44
 patch=1,EE,007cb2e4,word,00000000 // nop
-patch=1,EE,007cb2e8,word,0c042674 // jal 0x001099d0
+patch=1,EE,007cb2e8,word,0c042674 // jal 001099d0
 patch=1,EE,007cb2ec,word,00402025 // move a0, v0
-patch=1,EE,007cb2f0,word,080b739d // j 0x002dce74
+patch=1,EE,007cb2f0,word,080b739d // j 002dce74
 patch=1,EE,007cb2f4,word,00000000 // nop
 
-patch=1,EE,002dce44,word,081f2cbe // j 0x007cb2f8
+patch=1,EE,002dce44,word,081f2cbe // j 007cb2f8
 patch=1,EE,002dce48,word,00402025 // move a0, v0
 
-patch=1,EE,007cb2f8,word,8f82b6fc // lw v0,-0x4904(gp)=>btlInfo
-patch=1,EE,007cb2fc,word,8c43000c // lw v1,0xc(v0)
-patch=1,EE,007cb300,word,3c020010 // lui v0, 0x10
+patch=1,EE,007cb2f8,word,8f82b6fc // lw v0,-4904(gp)=>btlInfo
+patch=1,EE,007cb2fc,word,8c43000c // lw v1,c(v0)
+patch=1,EE,007cb300,word,3c020010 // lui v0, 10
 patch=1,EE,007cb304,word,00621024 // and v0, v1, v0
-patch=1,EE,007cb308,word,1002000c // beq v0, zero, 0x007cb33c
+patch=1,EE,007cb308,word,1002000c // beq v0, zero, 007cb33c
 patch=1,EE,007cb30c,word,00000000 //nop
 
-patch=1,EE,007cb310,word,8f82b5f4 // lw v0, -0x4a0c(gp)
-patch=1,EE,007cb314,word,8c43003c // lw v1, 0x3c(v0)
-patch=1,EE,007cb318,word,3c020003 // lui v0, 0x3
+patch=1,EE,007cb310,word,8f82b5f4 // lw v0, -4a0c(gp)
+patch=1,EE,007cb314,word,8c43003c // lw v1, 3c(v0)
+patch=1,EE,007cb318,word,3c020003 // lui v0, 3
 patch=1,EE,007cb31c,word,00621021 // addu v0, v1, v0
-patch=1,EE,007cb320,word,8c423310 // lw v0, 0x3310(v0)
+patch=1,EE,007cb320,word,8c423310 // lw v0, 3310(v0)
 patch=1,EE,007cb324,word,14400004 // bneq v0, zero, 007cb338
 
 patch=1,EE,007cb328,word,00000000 // nop
 
-patch=1,EE,007cb32c,word,0c042674 // jal 0x001099d0
-patch=1,EE,007cb330,word,2404000e // li a0, 0xe
-patch=1,EE,007cb334,word,080b739d // j 0x002dce74
+patch=1,EE,007cb32c,word,0c042674 // jal 001099d0
+patch=1,EE,007cb330,word,2404000e // li a0, e
+patch=1,EE,007cb334,word,080b739d // j 002dce74
 patch=1,EE,007cb338,word,00000000 // nop
 
 
 patch=1,EE,007cb33c,word,0c1223cc //jal rnd
 patch=1,EE,007cb340,word,00000000 // nop
-patch=1,EE,007cb344,word,838485d0 // lb a0, -0x7a30(gp)
-patch=1,EE,007cb348,word,10800009// beq a0, zero, 0x007cb370 normalBGM
+patch=1,EE,007cb344,word,838485d0 // lb a0, -7a30(gp)
+patch=1,EE,007cb348,word,10800009// beq a0, zero, 007cb370 normalBGM
 patch=1,EE,007cb34c,word,00000000 //nop
-patch=1,EE,007cb350,word,838485d1 // lb a0, -0x7a2f(gp)
+patch=1,EE,007cb350,word,838485d1 // lb a0, -7a2f(gp)
 patch=1,EE,007cb354,word,0044001b //divu v0, a0
 patch=1,EE,007cb358,word,00002010 //mfhi a0
-patch=1,EE,007cb35c,word,248403e8 //addiu a0, a0, 0x0c8
+patch=1,EE,007cb35c,word,248403e8 //addiu a0, a0, 0c8
 patch=1,EE,007cb360,word,0c042674 //jal  playBGM
 patch=1,EE,007cb364,word,00000000 //nop
-patch=1,EE,007cb368,word,080b739d //j 0x002dce74
+patch=1,EE,007cb368,word,080b739d //j 002dce74
 patch=1,EE,007cb36c,word,00000000//nop
 
-patch=1,EE,007cb370,word,0c042674 // jal 0x001099d0 :normalBGM
+patch=1,EE,007cb370,word,0c042674 // jal 001099d0 :normalBGM
 patch=1,EE,007cb374,word,00000000 // nop
 patch=1,EE,007cb378,word,00402025 // move a0, v0
-patch=1,EE,007cb37c,word,10800003 // beq a0, zero, 0x007cb348
+patch=1,EE,007cb37c,word,10800003 // beq a0, zero, 007cb348
 patch=1,EE,007cb380,word,00000000 //nop
-patch=1,EE,007cb384,word,080b7393 //j 0x002dce4c
+patch=1,EE,007cb384,word,080b7393 //j 002dce4c
 
 patch=1,EE,007cb388,word,00000000 // nop
-patch=1,EE,007cb38c,word,080b7399 //j 0x002dce64
+patch=1,EE,007cb38c,word,080b7399 //j 002dce64
 patch=1,EE,007cb390,word,00000000 // nop
